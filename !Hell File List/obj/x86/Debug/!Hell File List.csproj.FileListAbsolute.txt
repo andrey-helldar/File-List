@@ -12,3 +12,4 @@ F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранен
 F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\obj\x86\Debug\_Hell_File_List.fIndex.resources
 F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\obj\x86\Debug\_Hell_File_List.Properties.Resources.resources
 F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\obj\x86\Debug\!Hell File List.csproj.GenerateResource.Cache
+F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\obj\x86\Debug\!Hell File List.csprojResolveAssemblyReference.cache
