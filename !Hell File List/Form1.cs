@@ -90,7 +90,6 @@ namespace _Hell_File_List
             System.Diagnostics.Process proc = new System.Diagnostics.Process();
             proc.StartInfo.FileName = Application.StartupPath + "/files.txt";
             proc.Start();
-            //proc.WaitForExit();
         }
     }
 }
