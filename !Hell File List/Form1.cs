@@ -109,6 +109,8 @@ namespace _Hell_File_List
                     }
                     else
                     {
+                        tmp = "";
+
                         separator = separator == "space" ? " " : separator;
 
                         var tDir = new DirectoryInfo(dir.FullName);
