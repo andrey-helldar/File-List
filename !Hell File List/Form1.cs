@@ -13,6 +13,8 @@ namespace _Hell_File_List
     public partial class fIndex : Form
     {
         string separator = "New Line";
+        bool subfolder = true,
+            fullpath = false;
 
         public fIndex()
         {
@@ -41,6 +43,10 @@ namespace _Hell_File_List
             if (!bw.IsBusy)
             {
                 separator = cbSeparator.Text;
+
+                subfolder = cbSubfolder.Checked ? true : false;
+                fullpath = cbFullPath.Checked ? true : false;
+
                 bw.RunWorkerAsync();
             }
             else
@@ -51,38 +57,106 @@ namespace _Hell_File_List
 
         private void bw_DoWork(object sender, DoWorkEventArgs e)
         {
-            var dir = new DirectoryInfo(tbPath.Text);
-            var files = new List<string>();
+            var info = new DirectoryInfo(tbPath.Text);
+            DirectoryInfo[] dirs = info.GetDirectories();
 
-            foreach (FileInfo file in dir.GetFiles())
-            {
-                files.Add(Path.GetFileName(file.FullName));
-            }
+            var export = new List<string>();
+            string tmp = "";
 
-            if (separator == "New Line")
+            if (subfolder)
             {
-                File.WriteAllLines(Application.StartupPath + "/files.txt", files);
-            }
-            else
-            {
-                var tmp = "";
-                separator = separator != "space" ? separator : " ";
+                export.Add("==================================================================");
+                export.Add("\tParent directory");
+                export.Add("-----------------------------------");
 
-                foreach (string val in files)
+                // scan parent directory
+                if (separator == "New Line")
                 {
-                    tmp += separator + val;
-                }
-
-                if (separator.Length == 1)
-                {
-                    tmp = tmp.Remove(0, 1);
+                    foreach (FileInfo file in info.GetFiles())
+                    {
+                        export.Add(Path.GetFileName(file.FullName));
+                    }
                 }
                 else
                 {
-                    tmp = tmp.Remove(0, 2);
+                    separator = separator == "space" ? " " : separator;
+
+                    foreach (FileInfo file in info.GetFiles())
+                    {
+                        tmp += separator + Path.GetFileName(file.FullName);
+                    }
+
+                    tmp = tmp.Remove(0, separator.Length);
+
+                    export.Add(tmp);
                 }
-                File.WriteAllText(Application.StartupPath + "/files.txt", tmp);
+                export.Add("");
+
+                //scan subdirectory
+                foreach (DirectoryInfo dir in dirs)
+                {
+                    export.Add("==================================================================");
+                    export.Add("\t" + (fullpath ? dir.FullName : new DirectoryInfo(dir.FullName).Name));
+                    export.Add("-----------------------------------");
+
+                    if (separator == "New Line")
+                    {
+                        var tDir = new DirectoryInfo(dir.FullName);
+                        foreach (FileInfo file in tDir.GetFiles())
+                        {
+                            export.Add(Path.GetFileName(file.FullName));
+                        }
+                    }
+                    else
+                    {
+                        separator = separator == "space" ? " " : separator;
+
+                        var tDir = new DirectoryInfo(dir.FullName);
+                        foreach (FileInfo file in tDir.GetFiles())
+                        {
+                            tmp += separator + Path.GetFileName(file.FullName);
+                        }
+
+                        if (separator.Length == 1)
+                        {
+                            tmp = tmp.Remove(0, 1);
+                        }
+                        else
+                        {
+                            tmp = tmp.Remove(0, 2);
+                        }
+
+                        export.Add(tmp);
+                    }
+                    export.Add("");
+                }
             }
+            else
+            {
+                //scan parent directory
+                if (separator == "New Line")
+                {
+                    foreach (FileInfo file in info.GetFiles())
+                    {
+                        export.Add(Path.GetFileName(file.FullName));
+                    }
+                }
+                else
+                {
+                    separator = separator == "space" ? " " : separator;
+
+                    foreach (FileInfo file in info.GetFiles())
+                    {
+                        tmp += separator + Path.GetFileName(file.FullName);
+                    }
+
+                    tmp = tmp.Remove(0, separator.Length);
+
+                    export.Add(tmp);
+                }
+            }
+
+            File.WriteAllLines(Application.StartupPath + "/files.txt", export);
         }
 
         private void bw_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

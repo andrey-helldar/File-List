@@ -37,11 +37,13 @@
             this.cbSeparator = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bw = new System.ComponentModel.BackgroundWorker();
+            this.cbFullPath = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbFullPath);
             this.groupBox1.Controls.Add(this.cbSubfolder);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.tbPath);
@@ -55,7 +57,8 @@
             // cbSubfolder
             // 
             this.cbSubfolder.AutoSize = true;
-            this.cbSubfolder.Enabled = false;
+            this.cbSubfolder.Checked = true;
+            this.cbSubfolder.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbSubfolder.Location = new System.Drawing.Point(6, 45);
             this.cbSubfolder.Name = "cbSubfolder";
             this.cbSubfolder.Size = new System.Drawing.Size(97, 17);
@@ -81,6 +84,10 @@
             this.tbPath.Size = new System.Drawing.Size(350, 20);
             this.tbPath.TabIndex = 0;
             // 
+            // fbd
+            // 
+            this.fbd.ShowNewFolderButton = false;
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(374, 78);
@@ -93,7 +100,6 @@
             // 
             // cbSeparator
             // 
-            this.cbSeparator.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSeparator.FormattingEnabled = true;
             this.cbSeparator.Items.AddRange(new object[] {
             "New Line",
@@ -124,6 +130,16 @@
             this.bw.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bw_DoWork);
             this.bw.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bw_RunWorkerCompleted);
             // 
+            // cbFullPath
+            // 
+            this.cbFullPath.AutoSize = true;
+            this.cbFullPath.Location = new System.Drawing.Point(130, 45);
+            this.cbFullPath.Name = "cbFullPath";
+            this.cbFullPath.Size = new System.Drawing.Size(91, 17);
+            this.cbFullPath.TabIndex = 3;
+            this.cbFullPath.Text = "Write full path";
+            this.cbFullPath.UseVisualStyleBackColor = true;
+            // 
             // fIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,12 +167,13 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox tbPath;
-        private System.Windows.Forms.FolderBrowserDialog fbd;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox cbSeparator;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox cbSubfolder;
         private System.ComponentModel.BackgroundWorker bw;
+        private System.Windows.Forms.FolderBrowserDialog fbd;
+        private System.Windows.Forms.CheckBox cbFullPath;
     }
 }
 
