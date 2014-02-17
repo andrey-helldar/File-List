@@ -1,0 +1,14 @@
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\bin\Debug\!Hell File List.exe
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\bin\Debug\!Hell File List.pdb
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\obj\x86\Debug\_Hell_File_List.Properties.Resources.resources
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\obj\x86\Debug\!Hell File List.csproj.GenerateResource.Cache
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\obj\x86\Debug\!Hell File List.exe
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\obj\x86\Debug\!Hell File List.pdb
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\obj\x86\Debug\_Hell_File_List.fIndex.resources
+F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\obj\x86\Debug\!Hell File List.exe
+F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\obj\x86\Debug\!Hell File List.pdb
+F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\bin\Debug\!Hell File List.exe
+F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\bin\Debug\!Hell File List.pdb
+F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\obj\x86\Debug\_Hell_File_List.fIndex.resources
+F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\obj\x86\Debug\_Hell_File_List.Properties.Resources.resources
+F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\obj\x86\Debug\!Hell File List.csproj.GenerateResource.Cache

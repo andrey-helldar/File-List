@@ -1,0 +1,16 @@
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\bin\Release\!Hell File List.exe
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\bin\Release\!Hell File List.pdb
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\obj\x86\Release\_Hell_File_List.fIndex.resources
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\obj\x86\Release\_Hell_File_List.Properties.Resources.resources
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\obj\x86\Release\!Hell File List.csproj.GenerateResource.Cache
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\obj\x86\Release\!Hell File List.exe
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\obj\x86\Release\!Hell File List.pdb
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\obj\x86\Release\!Hell File List.csprojResolveAssemblyReference.cache
+F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\obj\x86\Release\!Hell File List.exe
+F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\obj\x86\Release\!Hell File List.pdb
+F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\bin\Release\!Hell File List.exe
+F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\bin\Release\!Hell File List.pdb
+F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\obj\x86\Release\!Hell File List.csprojResolveAssemblyReference.cache
+F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\obj\x86\Release\_Hell_File_List.fIndex.resources
+F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\obj\x86\Release\_Hell_File_List.Properties.Resources.resources
+F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\obj\x86\Release\!Hell File List.csproj.GenerateResource.Cache
