@@ -154,6 +154,14 @@ namespace _Hell_File_List
                 }
             }
 
+            export.Add("");
+            export.Add("");
+            export.Add("");
+            export.Add("==================================================================");
+            export.Add("\t Saved to:");
+            export.Add(Application.StartupPath + "/files.txt");
+            export.Add("==================================================================");
+
             File.WriteAllLines(Application.StartupPath + "/files.txt", export);
         }
 
