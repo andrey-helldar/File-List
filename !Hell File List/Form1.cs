@@ -86,7 +86,8 @@ namespace _Hell_File_List
                         tmp += separator + Path.GetFileName(file.FullName);
                     }
 
-                    tmp = tmp.Remove(0, separator.Length);
+                    if (tmp.Length > 0)
+                        tmp = tmp.Remove(0, separator.Length);
 
                     export.Add(tmp);
                 }
@@ -146,7 +147,8 @@ namespace _Hell_File_List
                         tmp += separator + Path.GetFileName(file.FullName);
                     }
 
-                    tmp = tmp.Remove(0, separator.Length);
+                    if (tmp.Length > 0)
+                        tmp = tmp.Remove(0, separator.Length);
 
                     export.Add(tmp);
                 }
