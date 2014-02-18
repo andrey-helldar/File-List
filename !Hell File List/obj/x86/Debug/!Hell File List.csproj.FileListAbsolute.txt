@@ -17,3 +17,8 @@ F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранен
 F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\bin\Debug\!Hell File List.application
 F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\obj\x86\Debug\!Hell File List.exe.manifest
 F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\obj\x86\Debug\!Hell File List.application
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\bin\Debug\!Hell File List.exe.manifest
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\bin\Debug\!Hell File List.application
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\obj\x86\Debug\!Hell File List.csprojResolveAssemblyReference.cache
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\obj\x86\Debug\!Hell File List.exe.manifest
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\obj\x86\Debug\!Hell File List.application

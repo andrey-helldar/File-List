@@ -119,14 +119,8 @@ namespace _Hell_File_List
                             tmp += separator + Path.GetFileName(file.FullName);
                         }
 
-                        if (separator.Length == 1)
-                        {
-                            tmp = tmp.Remove(0, 1);
-                        }
-                        else
-                        {
-                            tmp = tmp.Remove(0, 2);
-                        }
+                        if (tmp.Length > 0)
+                            tmp = tmp.Remove(0, separator.Length);
 
                         export.Add(tmp);
                     }

@@ -18,3 +18,7 @@ F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранен
 F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\bin\Release\!Hell File List.application
 F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\obj\x86\Release\!Hell File List.exe.manifest
 F:\ВАЖНЫЕ ДАННЫЕ\!!Важные документы\!Сохранения программ\Visual Studio C#\!Hell File List\!Hell File List\obj\x86\Release\!Hell File List.application
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\bin\Release\!Hell File List.exe.manifest
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\bin\Release\!Hell File List.application
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\obj\x86\Release\!Hell File List.exe.manifest
+D:\Helldar\Visual C#\!Hell File List\!Hell File List\obj\x86\Release\!Hell File List.application
