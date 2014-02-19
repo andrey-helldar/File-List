@@ -15,6 +15,8 @@ namespace _Hell_File_List
         string separator = "New Line";
         bool subfolder = true,
             fullpath = false;
+        int progress = 0,
+            progressMax = 100;
 
         public fIndex()
         {
@@ -43,6 +45,8 @@ namespace _Hell_File_List
             if (!bw.IsBusy)
             {
                 separator = cbSeparator.Text;
+                progressMax = 100;
+                progress = 0;
 
                 subfolder = cbSubfolder.Checked ? true : false;
                 fullpath = cbFullPath.Checked ? true : false;
@@ -57,6 +61,8 @@ namespace _Hell_File_List
 
         private void bw_DoWork(object sender, DoWorkEventArgs e)
         {
+            bw.ReportProgress(progress);
+
             var info = new DirectoryInfo(tbPath.Text);
             DirectoryInfo[] dirs = info.GetDirectories();
 
@@ -72,18 +78,24 @@ namespace _Hell_File_List
                 // scan parent directory
                 if (separator == "New Line")
                 {
+                    progressMax = info.GetFiles().Length > 0 ? info.GetFiles().Length : 0;
+
                     foreach (FileInfo file in info.GetFiles())
                     {
                         export.Add(Path.GetFileName(file.FullName));
+                        bw.ReportProgress(++progress);
                     }
                 }
                 else
                 {
                     separator = separator == "space" ? " " : separator;
 
+                    progressMax = info.GetFiles().Length > 0 ? info.GetFiles().Length : 0;
+
                     foreach (FileInfo file in info.GetFiles())
                     {
                         tmp += separator + Path.GetFileName(file.FullName);
+                        bw.ReportProgress(++progress);
                     }
 
                     if (tmp.Length > 0)
@@ -103,21 +115,26 @@ namespace _Hell_File_List
                     if (separator == "New Line")
                     {
                         var tDir = new DirectoryInfo(dir.FullName);
+                        progressMax = progressMax + tDir.GetFiles().Length;
+
                         foreach (FileInfo file in tDir.GetFiles())
                         {
                             export.Add(Path.GetFileName(file.FullName));
+                            bw.ReportProgress(++progress);
                         }
                     }
                     else
                     {
                         tmp = "";
-
                         separator = separator == "space" ? " " : separator;
 
                         var tDir = new DirectoryInfo(dir.FullName);
+                        progressMax = progressMax + tDir.GetFiles().Length;
+
                         foreach (FileInfo file in tDir.GetFiles())
                         {
                             tmp += separator + Path.GetFileName(file.FullName);
+                            bw.ReportProgress(++progress);
                         }
 
                         if (tmp.Length > 0)
@@ -133,18 +150,23 @@ namespace _Hell_File_List
                 //scan parent directory
                 if (separator == "New Line")
                 {
+                    progressMax = info.GetFiles().Length;
+
                     foreach (FileInfo file in info.GetFiles())
                     {
                         export.Add(Path.GetFileName(file.FullName));
+                        bw.ReportProgress(++progress);
                     }
                 }
                 else
                 {
+                    progressMax = info.GetFiles().Length;
                     separator = separator == "space" ? " " : separator;
 
                     foreach (FileInfo file in info.GetFiles())
                     {
                         tmp += separator + Path.GetFileName(file.FullName);
+                        bw.ReportProgress(++progress);
                     }
 
                     if (tmp.Length > 0)
@@ -170,6 +192,13 @@ namespace _Hell_File_List
             System.Diagnostics.Process proc = new System.Diagnostics.Process();
             proc.StartInfo.FileName = Application.StartupPath + "/files.txt";
             proc.Start();
+        }
+
+        private void bw_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            pb.Maximum = progressMax;
+            pb.Value = e.ProgressPercentage;
+;
         }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbFullPath = new System.Windows.Forms.CheckBox();
             this.cbSubfolder = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.tbPath = new System.Windows.Forms.TextBox();
@@ -37,12 +38,13 @@
             this.cbSeparator = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bw = new System.ComponentModel.BackgroundWorker();
-            this.cbFullPath = new System.Windows.Forms.CheckBox();
+            this.pb = new System.Windows.Forms.ProgressBar();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.pb);
             this.groupBox1.Controls.Add(this.cbFullPath);
             this.groupBox1.Controls.Add(this.cbSubfolder);
             this.groupBox1.Controls.Add(this.button1);
@@ -53,6 +55,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Choose folder:";
+            // 
+            // cbFullPath
+            // 
+            this.cbFullPath.AutoSize = true;
+            this.cbFullPath.Location = new System.Drawing.Point(130, 45);
+            this.cbFullPath.Name = "cbFullPath";
+            this.cbFullPath.Size = new System.Drawing.Size(91, 17);
+            this.cbFullPath.TabIndex = 3;
+            this.cbFullPath.Text = "Write full path";
+            this.cbFullPath.UseVisualStyleBackColor = true;
             // 
             // cbSubfolder
             // 
@@ -128,17 +140,15 @@
             // bw
             // 
             this.bw.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bw_DoWork);
+            this.bw.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bw_ProgressChanged);
             this.bw.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bw_RunWorkerCompleted);
             // 
-            // cbFullPath
+            // pb
             // 
-            this.cbFullPath.AutoSize = true;
-            this.cbFullPath.Location = new System.Drawing.Point(130, 45);
-            this.cbFullPath.Name = "cbFullPath";
-            this.cbFullPath.Size = new System.Drawing.Size(91, 17);
-            this.cbFullPath.TabIndex = 3;
-            this.cbFullPath.Text = "Write full path";
-            this.cbFullPath.UseVisualStyleBackColor = true;
+            this.pb.Location = new System.Drawing.Point(362, 45);
+            this.pb.Name = "pb";
+            this.pb.Size = new System.Drawing.Size(90, 17);
+            this.pb.TabIndex = 4;
             // 
             // fIndex
             // 
@@ -174,6 +184,7 @@
         private System.ComponentModel.BackgroundWorker bw;
         private System.Windows.Forms.FolderBrowserDialog fbd;
         private System.Windows.Forms.CheckBox cbFullPath;
+        private System.Windows.Forms.ProgressBar pb;
     }
 }
 
